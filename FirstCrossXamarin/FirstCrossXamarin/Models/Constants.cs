@@ -14,5 +14,7 @@ namespace FirstCrossXamarin.Models
 
         // Login
         public static string LoginUrl = "https://test.com/api/Auth/Login";
+
+        public static string NoInternetText = "No Internet. Please reconnect.";
     }
 }

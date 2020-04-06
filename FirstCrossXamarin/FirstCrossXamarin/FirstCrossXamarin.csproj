@@ -11,6 +11,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Models\Constants.cs~RF19e60cf.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
     <PackageReference Include="Xamarin.Forms" Version="4.5.0.495" />
