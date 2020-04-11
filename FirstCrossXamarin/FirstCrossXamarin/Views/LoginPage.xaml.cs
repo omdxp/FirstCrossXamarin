@@ -40,26 +40,30 @@ namespace FirstCrossXamarin.Views
             User user = new User(Entry_Username.Text, Entry_Password.Text);
             if (user.CheckInformation())
             {
-                DisplayAlert("Login", "You have logged in successfuly!", "Okay");
+                ActivitySpinner.IsVisible = true;
                 //var result = await App.RestService.Login(user);
                 var result = new Token();
-                if (result.access_token != null)
+                await DisplayAlert("Login", "You have logged in successfuly!", "Okay");
+                
+                if (result != null)
                 {
+                    ActivitySpinner.IsVisible = false;
                     //App.UserDatabase.SaveUser(user);
                     //App.TokenDatabase.SaveToken(result);
                     if (Device.OS == TargetPlatform.Android)
                     {
-                        Application.Current.MainPage = new NavigationPage(new Dashboard());
+                        Application.Current.MainPage = new NavigationPage(new MasterDetail());
                     }
                     else if (Device.OS == TargetPlatform.iOS)
                     {
-                        await Navigation.PushModalAsync(new NavigationPage(new Dashboard()));
+                        await Navigation.PushModalAsync(new NavigationPage(new MasterDetail()));
                     }
                 }
             }
             else
             {
-                DisplayAlert("Login", "Empty username or password!", "Okay");
+                await DisplayAlert("Login", "Empty username or password!", "Okay");
+                ActivitySpinner.IsVisible = false;
             }
 
 

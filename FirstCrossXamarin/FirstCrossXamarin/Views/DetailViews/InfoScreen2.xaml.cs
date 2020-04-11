@@ -10,17 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace FirstCrossXamarin.Views.DetailViews
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class InfoScreen1 : ContentPage
+    public partial class InfoScreen2 : ContentPage
     {
-        public InfoScreen1()
+        public InfoScreen2()
         {
             InitializeComponent();
-            Init();
-        }
-
-        void Init()
-        {
-            ActivitySpinner.IsVisible = true;
         }
     }
 }

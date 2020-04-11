@@ -95,7 +95,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FirstCrossXamarin\FirstCrossXamarin.csproj">
       <Project>{8AA482B3-E5E1-4681-99E3-7CE7D24985B2}</Project>
