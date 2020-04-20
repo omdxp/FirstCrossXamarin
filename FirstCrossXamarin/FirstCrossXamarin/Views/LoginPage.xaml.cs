@@ -44,6 +44,12 @@ namespace FirstCrossXamarin.Views
                 //var result = await App.RestService.Login(user);
                 var result = new Token();
                 await DisplayAlert("Login", "You have logged in successfuly!", "Okay");
+
+                if (App.SettingsDatabase.GetSettings() == null)
+                {
+                    Settings settings = new Settings();
+                    App.SettingsDatabase.SaveSettings(settings);
+                }
                 
                 if (result != null)
                 {

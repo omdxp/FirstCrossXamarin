@@ -13,6 +13,7 @@ namespace FirstCrossXamarin
     {
         static TokenDatabaseController tokenDatabase;
         static UserDatabaseController userDatabase;
+        static SettingsDatabaseController settingsDatabase;
         static RestService restService;
         static Label labelScreen;
         private static bool hasInternet;
@@ -60,6 +61,18 @@ namespace FirstCrossXamarin
                     tokenDatabase = new TokenDatabaseController();
                 }
                 return tokenDatabase;
+            }
+        }
+
+        public static SettingsDatabaseController SettingsDatabase
+        {
+            get
+            {
+                if (settingsDatabase == null)
+                {
+                    settingsDatabase = new SettingsDatabaseController();
+                }
+                return settingsDatabase;
             }
         }
 
